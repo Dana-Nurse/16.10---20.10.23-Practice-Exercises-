@@ -1,0 +1,175 @@
+# Function that return the item of the list at the specified index
+def get_nth_item(the_list, n):
+    return the_list[n]
+
+
+iceland = ["Dana", "Iyesha", "Mary", "Peter", "Simone Wyatt"]
+
+print(get_nth_item(iceland, 4))
+
+#Slice and return the section of the list between indexes 1-3
+print(iceland[1:3])
+
+# Function to return the first item of the list
+def get_first_item(the_list):
+    return the_list[0]
+
+
+languages = ["Python", "HTML", "CSS", "JavaScript", "SQL"]
+
+print(get_first_item(languages))
+
+print(languages[-1])
+
+#A function that checks if string contains substring
+def a_within_b(a,b):
+    return a in b
+
+print(a_within_b("dad", "Trinidad"))
+
+#Function that checks if a is greater than or equal to b.
+def greater_or_equal(a, b):
+    return a >= b
+
+print(greater_or_equal(34, 44))
+
+#Function that checks if a is less than b and returns a boolean value.
+def a_is_less_than_b(a, b):
+  return a < b
+
+
+print(a_is_less_than_b(27, 5))
+
+# Return "STRING is five characters long" if the string is five characters long.
+def has_five_chars(the_string):
+    if len(the_string) == 5:
+        print("STRING is five characters long")
+    else:
+        return "Not five characters."
+
+
+print(has_five_chars("Nurse"))
+
+# Return "First of the month!" if the day number is 1.
+def is_first_of_month(day_number):
+    if day_number == 1:
+        print("First of the the month!")
+    else:
+        return "Not first of the month."
+
+
+print(is_first_of_month(23))
+
+
+# Return the string "Hello, Kay!" where "Kay" is the
+def greet(name):
+    return f"Hello, {name}!"
+
+
+print(greet("Kay"))
+
+
+
+
+my_name = "Dana"
+print(f"Hello, {my_name}!")
+
+print(f"Your name is {len(my_name)} characters long")
+
+#Make  a functiont to make a string uppercase
+def make_upper(string):
+    return string.upper()
+
+print(make_upper("Nurse"))
+
+def make_lower(string):
+    return string.lower()
+
+def strip_whitespace(string):
+    return string.strip()
+
+print(strip_whitespace("   HEllo   "))
+
+#Complete the function that converts a boolean to a yes or no
+def bool_to_word(boolean):
+    if True:
+        print("Yes")
+    if False:
+        print("No")
+
+
+bool_to_word(True)
+
+
+#Complete the solution so that it reverses the string passed into it.
+def solution(string):
+    return string[::-1]     #"string[start:stop:step]"
+
+
+print(solution("Dana"))
+
+
+#Very simple, given an integer or a floating-point number, find its opposite.
+
+#1 Using * numerical operator
+def opposite_number(num):
+    return num * -1
+
+
+print(opposite_number(8))
+
+#2 Using "-" operator to negate the number
+def opposite_number(num):
+    return -num
+
+
+print(opposite_number(3))
+
+
+#A function that can transform a number (integer) into a string. What ways to achieve this?
+#1. String method
+def num_to_string(num):
+    result = str(num)
+    return result
+
+print(num_to_string(6))
+
+#2 String Formatting using .format() method or f string
+def num_to_string(num):
+    result = "{}".format(num)
+    return result
+
+def num_to_string(num):
+    result = f"{num}"
+    return result
+
+#3. No explicit conversion
+def num_to_string(num):
+    return num  # No need for explicit conversion
+
+
+
+
+#Create a function that always returns True for every item in a given list. However, if an element is the word 'flick', switch to always returning the opposite boolean value.
+
+def opposite_flick(lst):
+    result = []
+    is_true = True
+    for element in lst:
+        if element == "flick":
+            is_true = False
+        result.append(is_true)
+    return result
+
+lst = ["code", "wars", "bootcamp", "flick", "prep"]
+print(opposite_flick(lst))
+
+#Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+def greet(name):
+    return f"Hello, {name}, how are you doing today?"
+
+#The problem statement is asking to DEFINE a function that take sthe name as an argument and then returns the specific greeting statement
+#The input function should not be used with the function itself
+#e.g.:
+name = input("What is your name? ")
+print(greet(name))
