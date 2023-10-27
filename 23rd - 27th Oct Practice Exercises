@@ -1,1 +1,50 @@
+#Complete the square sum function so that it squares each number passed into it
+# then sums the results together.
 
+def sum_squared(numbers):
+    squared = numbers ** 2
+    for number in squared:
+        sum += number
+    return sum
+
+
+#a function that removes the first and last characters of a string. You're given one parameter, the original string.
+# You don't have to worry with strings with less than two characters.
+def remove_char(s):
+    if len(s) < 2:
+        return ""
+    else:
+        return s[1:-1]
+
+
+#Write a function that accepts an integer n and a string s as parameters
+# and returns a string of s repeated exactly n times.
+
+def n_strings(integer, string):
+    return (string + " ") * integer
+
+print(n_strings(4, "Men"))
+
+
+#Make a given number negative. But maybe the number is already negative?
+def make_negative(number):
+    if number > 0:
+        print(number * -1)
+    elif number < 0:
+        print(number)
+    else:
+        return(0)
+
+
+#Although this is correct, this code is a lot neater:
+def make_negativea(number):
+    if number > 0:
+        return -number
+    else:
+        return number
+
+
+
+
+for letter in ["a", "b", "c"]:
+  print(f"This letter is {letter}")
