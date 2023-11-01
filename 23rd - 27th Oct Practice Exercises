@@ -1,12 +1,6 @@
 #Complete the square sum function so that it squares each number passed into it
-# then sums the results together.
-
-def sum_squared(numbers):
-    squared = numbers ** 2
-    for number in squared:
-        sum += number
-    return sum
-
+def square_sum(numbers):
+    return sum(x ** 2 for x in numbers)
 
 #a function that removes the first and last characters of a string. You're given one parameter, the original string.
 # You don't have to worry with strings with less than two characters.
