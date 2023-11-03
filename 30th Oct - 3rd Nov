@@ -1,3 +1,22 @@
+lines = [
+  "Dear Professor Dumbledore,",
+  "I am writing to express my eagerness to attend Hogwarts School of Witchcraft and Wizardry.",
+  "I have been practicing my spells and charms diligently.",
+  "I look forward to the magical adventures that await me.",
+  "Yours sincerely,",
+  "Harry Potter"
+]
+
+text = ""  # This is the accumulator variable where we store our Harry Potter-related text
+
+for line in lines:  # Loop through each line
+    text += line  # Append the line to the text
+    text += "\n"  # Add a new line character to separate lines
+
+print(text)
+
+
+
 #Write a program that finds the summation of every number from 1 to num.
 # The number will always be a positive integer greater than 0.
 
