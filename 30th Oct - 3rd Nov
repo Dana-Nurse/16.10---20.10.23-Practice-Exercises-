@@ -1,3 +1,42 @@
+#In the code below, we have a list of raw locations in the Harry Potter world, and we create a new list 
+clean_locations to store the non-None values. Then, we print both the raw and clean lists of locations.
+
+raw_locations = ["Hogwarts", "Diagon Alley", None, "The Burrow", "Azkaban"]
+
+clean_locations = []
+
+for location in raw_locations:
+    if location is not None:
+        clean_locations.append(location)
+
+print("Raw Locations:", raw_locations)
+print("Clean Locations:", clean_locations)
+
+
+
+#In this code below, we define a function only_wizarding_locations that takes a list of locations as input. 
+It filters and returns a new list containing only locations related to the wizarding world based on specific keywords. 
+When we test the function with the provided list, it will return the locations that match the wizarding keywords.
+
+def only_wizarding_locations(locations):
+    wizarding_locations = []
+    wizarding_keywords = ["Hogwarts", "Diagon Alley", "The Burrow", "Azkaban"]
+
+    for location in locations:
+        for keyword in wizarding_keywords:
+            if keyword in location:
+                wizarding_locations.append(location)
+                break
+
+    return wizarding_locations
+
+# Test the function
+print("\nFunction: only_wizarding_locations")
+locations = ["Hogwarts School of Witchcraft and Wizardry", "Gringotts Bank", "Malfoy Manor", "The Leaky Cauldron"]
+print(only_wizarding_locations(locations))
+
+
+
 lines = [
   "Dear Professor Dumbledore,",
   "I am writing to express my eagerness to attend Hogwarts School of Witchcraft and Wizardry.",
