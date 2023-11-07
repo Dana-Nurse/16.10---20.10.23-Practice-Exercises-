@@ -1,0 +1,55 @@
+#A function that determines whether a string that contains only letters is an isogram.
+#Assume the empty string is an isogram. Ignore letter case.
+def isIsogram_with_dict(string):
+    string = string.lower()
+    char_count = {}
+
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    for count in char_count.values():
+        if count > 1:
+            return False
+
+    return True
+
+
+#write a function that takes a string and return a new string with all vowels removed.
+def vowels_removed(string):
+    vowels = ["a", "e", "i", "o", "u"]
+    new_string = ""
+    for char in string:
+        if char.lower() not in vowels:
+            new_string += char
+            return new_string
+
+
+
+#Return the number (count) of vowels in the given string.
+#We will consider a, e, i, o, u as vowels for this Kata (but not y).
+#The input string will only consist of lower case letters and/or spaces.
+#Option 1
+def get_count(sentence):
+    vowels = ["a", "e", "i", "o", "u"]
+    vowels_count = 0
+    for char in sentence:
+        if char in vowels:
+            vowels_count += 1
+    return vowels_count
+
+
+#Option 2
+def vowel_count(string):
+    vowels = ["a", "e", "i", "o", "u"]
+    vowels_in_string = []
+    for char in string:
+        if char in vowels:
+            vowels_in_string.append(char)
+    return len(vowels_in_string)
+
+#Make a simple function called greet that returns the most-famous "hello world!".
+def hello_world():
+    return "hello world!"
