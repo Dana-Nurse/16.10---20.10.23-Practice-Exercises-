@@ -1,3 +1,106 @@
+# create a function that takes a list of non-negative integers and strings
+# and returns a new list with the strings filtered out.
+
+#My Way
+def filter_list(*args):
+    list = []
+    for item in args:
+        if type(item) == int:
+            list.append(item)
+    return list
+
+print(filter_list("hi", 2, 3, 4, "bye"))
+
+#Option2:
+def filter_strings(l):
+    result = []
+    for item in l:
+        if isinstance(item, int):
+            result.append(item)
+    return result
+
+print(filter_list("hi", 2, 3, 4, "bye"))
+
+
+#you are given a string of space separated numbers,
+#and have to return the highest and lowest number.
+#Output string must be two numbers separated by a single space,
+# and highest number is first.
+
+def high_and_low(numbers):
+    # Split the input string into a list of numbers as strings.
+    num_strings = numbers.split()
+
+    # Convert the list of number strings into a list of integers.
+    num_list = [int(num) for num in num_strings]
+
+    # Find the maximum and minimum numbers.
+    highest = max(num_list)
+    lowest = min(num_list)
+
+    # Format the result as a string with a space between the highest and lowest numbers.
+    result = f"{highest} {lowest}"
+
+    return result
+
+
+#Check to see if a string has the same amount of 'x's and 'o's.
+# The method must return a boolean and be case insensitive.
+# The string can contain any char.
+
+#Best Practice:
+def xo(s):
+    s = s.lower()
+    return s.count('x') == s.count('o')
+
+
+#My work
+def XO(string):
+    string = string.lower()
+    xo_list = []
+
+    for char in string:
+        # Check if the current character is 'x' or 'o'.
+        if char == 'x' or char == 'o':
+            xo_list.append(char)  # If 'x' or 'o' is found, append it to xo_list.
+
+    x_count = xo_list.count('x')
+    o_count = xo_list.count('o')
+
+    return x_count == o_count  # Compare the counts of 'x' and 'o' and return True if they are equal, False otherwise.
+
+#Imrpoved work:
+def equal_XO(string):
+    string = string.lower()  # Convert the string to lowercase for case insensitivity
+    x_count = string.count('x')  # Count the number of 'x's
+    o_count = string.count('o')  # Count the number of 'o's
+    return x_count == o_count  # Compare the counts and return True if they are equal, False otherwise
+
+
+#A function that determines whether a string that contains only letters is an isogram.
+#Assume the empty string is an isogram. Ignore letter case.
+
+#Option 1:
+def is_isogram(string):
+    string = string.lower()
+    isogram = ""
+    for char in string:
+        if char not in isogram:
+            isogram += char
+        else:
+            return False
+    return True
+
+
+#Option 2
+def isogram(string):
+    string = string.lower()
+    for letter in string:
+        if string.count(letter) > 1: return False
+    return True
+
+
+
 #A function that determines whether a string that contains only letters is an isogram.
 #Assume the empty string is an isogram. Ignore letter case.
 def isIsogram_with_dict(string):
