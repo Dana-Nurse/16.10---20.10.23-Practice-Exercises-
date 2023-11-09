@@ -1,3 +1,41 @@
+#Given a word - return the middle character of the word.
+# If the word's length is odd, return the middle character.
+# If the word's length is even, return the middle 2 characters.
+def get_middle(s):
+    if len(s) % 2 == 0:
+        first_middle_idex = len(s) // 2 - 1 #this gives the index position, and then -1 to get the first of the middle numbers
+        print(s[first_middle_idex:first_middle_idex + 2])
+    else:
+        odd_mid_index = len(s) // 2 #this gives the INDEX. floor division, divides and rounds it DOWN to the nearest integer
+        return (s[odd_mid_index])
+
+print(get_middle("Dana"))
+
+#Program that filters a list of strings and returns a list with only your friends name in it.
+#If a name has exactly 4 letters in it, it is a friend
+# Otherwise, you can be sure he's not...
+def friend(x):
+    friends = []
+    for item in x:
+        if len(item) == 4:
+            friends.append(item)
+    return friends
+
+
+#a Program that filters a list of strings and returns a list with only your friends name in it.
+#If a name has exactly 4 letters in it, it is a friend
+# Otherwise, you can be sure he's not...
+
+def friend(x):
+    friends = []
+    for item in x:
+        if len(item) == 4:
+            friends.append(item)
+    return friends
+
+print(friend(["dana", "bean", "bob"]))
+
+
 #a function that can take any non-negative integer as an argument
 # and return it with its digits in descending order.
 def descending_order(num):
