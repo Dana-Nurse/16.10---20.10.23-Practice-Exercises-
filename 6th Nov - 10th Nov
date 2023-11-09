@@ -1,3 +1,57 @@
+#a function that can take any non-negative integer as an argument
+# and return it with its digits in descending order.
+def descending_order(num):
+    if num >= 0:
+        num_string = str(num)
+        ordered_digits = sorted(num_string, reverse=True)
+        result = int("".join(ordered_digits))
+        return result
+    else:
+        return "Please provide a non-negative integer."
+
+# Example usage:
+result = descending_order(542109)
+print(result)  # Output: 954210
+
+
+print(descending_order(746924204))
+
+#Square every digit of a number and concatenate them.
+# The function accepts an integer and returns an integer.
+
+#CodeWars Better Practice 1
+def sqr_digits(num):
+    return int(''.join(str(int(d)**2) for d in str(num)))
+
+
+#CodeWars Better Practice 2
+def square_ds(num):
+    squares = ''
+    for x in str(num):
+        squares += str(int(x) ** 2)
+    return int(squares)
+
+
+#My Code
+def square_digits(num):
+    num = str(num)
+    numbers = []
+    for char in num:
+        numbers.append(char)  # Append individual digits, not the entire string.
+
+    squared = []
+    for item in numbers: #square each digit
+        squared.append(str(int(item) ** 2))  # Convert the squared result to a string.
+
+    result = "".join(squared)  # Concatenate the squared digits
+    final_result = int(result) # Convert the result back to an integer
+    return final_result  # Return the squared result, not the 'numbers' list.
+
+
+print(square_digits(345))
+
+
+
 # create a function that takes a list of non-negative integers and strings
 # and returns a new list with the strings filtered out.
 
