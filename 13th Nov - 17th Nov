@@ -1,1 +1,13 @@
-#Leveled up to Kata 7
+#Day 14 of November 2023: 
+multiline = '''
+Hey, how are you?
+
+I'm well, thanks, you?
+
+Excellent.
+'''
+
+print(multiline)
+
+
+#Monday 13th November - day off to celebrate Diwalia
