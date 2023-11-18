@@ -1,3 +1,47 @@
+#Sum of two lowest positive integers in minimum of 4 positive intergars.
+def sum_two_smallest_numbers(numbers):
+    sorted_numbers = sorted(numbers)
+    sum = sorted_numbers[0] + sorted_numbers[1]
+    return sum
+
+
+print(sum_two_smallest_numbers([1,2,76,3,2,5]))
+#Case Sensitivity
+
+
+
+#In DNA strings, symbols "A" and "T" are complements of each other,
+# as "C" and "G". Function receives one side of the DNA (string)
+# and you need to return the other complementary side.
+
+#Replace method
+def DNA_strand(dna):
+    complementary_dna = dna.replace("A", "t").replace("T", "a").replace("C", "g").replace("G", "c")
+    return complementary_dna.upper()
+
+
+
+
+#Loop DNA
+def DNA_strand(dna):
+    correct_dna = ""
+    for char in dna:
+        char_lower = char.lower()  # Convert the character to lowercase for comparison
+        if char_lower == "a":
+            correct_dna += "t"
+        elif char_lower == "t":
+            correct_dna += "a"
+        elif char_lower == "c":
+            correct_dna += "g"
+        elif char_lower == "g":
+            correct_dna += "c"
+        else:
+            correct_dna += char  # If the character is not A, T, C, or G, keep it as it is
+    return correct_dna.upper()
+
+print(DNA_strand("atcgATCG"))
+
+
 #solution so that it returns true if the first argument(string)
 # passed in ends with the 2nd argument (also a string).
 
