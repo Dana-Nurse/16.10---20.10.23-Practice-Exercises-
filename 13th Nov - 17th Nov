@@ -1,3 +1,39 @@
+#ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot
+# contain anything but exactly 4 digits or exactly 6 digits.
+#If the function is passed a valid PIN string, return true, else false
+
+#Best Practice:
+def validate_pincw(pin):
+    return len(pin) in (4, 6) and pin.isdigit()
+#The in operator checks if the left operand (len(pin)) exists within the tuple (4, 6).
+# It returns True if the length of pin matches either 4 or 6; otherwise, it returns False.
+
+#and: The logical and operator combines the two conditions. It returns True only if both conditions on
+# #its left and right sides are True; otherwise, it returns False
+
+
+#MyCode
+def validate_pin(pin):
+    if pin.isdigit() and (len(pin) == 4 or len(pin) == 6):
+        #By adding parentheses around the len it ensures that the part of the condtion is
+        # still evaluated together after the pin.isdigit
+         return True
+    else:
+        return False
+
+
+print(validate_pin("-23456"))
+
+#Implement a function that adds two numbers together and
+# returns their sum in binary. The conversion can be done before,
+# or after the addition. The binary number returned should be a string.
+
+def add_binary(a,b):
+    return bin(sum([a,b]))[2:]
+
+print(add_binary(5, 10))
+
+
 Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
 
 Note: a and b are not ordered!
@@ -11,20 +47,36 @@ Examples (a, b) --> output (explanation)
 (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 Your function should only return a number, not the explanation about how you get that number.
 
+def get_addition(a,b):
+    if a == b:
+        return a
+    else:
+        min_val = min(a, b)
+        max_val = max(a, b)
+        ints_sum = sum(range(min_val, max_val + 1))
+        return ints_sum
 
 
+print(get_addition(1,10))
 
 
+def get_sum(a,b):
+    if a == b:
+        return a
+    else:
+        ordered = sorted([a, b])
+        all_integers = sum(range(ordered[0], ordered[1] + 1))
+        return all_integers
 
 
+#Sum of two lowest positive integers in minimum of 4 positive intergars.
+def sum_two_smallest_numbers(numbers):
+    sorted_numbers = sorted(numbers)
+    sum = sorted_numbers[0] + sorted_numbers[1]
+    return sum
 
 
-
-
-
-
-
-
+print(sum_two_smallest_numbers([1,2,76,3,2,5]))
 
 
 
