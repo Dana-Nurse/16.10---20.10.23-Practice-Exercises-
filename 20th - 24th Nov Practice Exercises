@@ -1,3 +1,67 @@
+#~Common listmethods
+
+List Methods:
+append(): Adds an element to the end of the list.
+
+python
+Copy code
+my_list = [1, 2, 3]
+my_list.append(4)
+extend(): Appends elements from another iterable to the end of the list.
+
+python
+Copy code
+my_list = [1, 2, 3]
+my_list.extend([4, 5, 6])
+insert(): Inserts an element at a specified position in the list.
+
+python
+Copy code
+my_list = [1, 2, 4]
+my_list.insert(2, 3)  # Inserts 3 at index 2
+remove(): Removes the first occurrence of a specified value from the list.
+
+python
+Copy code
+my_list = [1, 2, 3, 2]
+my_list.remove(2)  # Removes the first occurrence of 2
+pop(): Removes and returns the element at the specified index (or the last element if index is not provided).
+
+python
+Copy code
+my_list = [1, 2, 3]
+popped_element = my_list.pop()  # Removes and returns 3
+index(): Returns the index of the first occurrence of a value in the list.
+
+python
+Copy code
+my_list = [1, 2, 3, 2]
+index = my_list.index(2)  # Returns index 1
+count(): Counts the number of occurrences of a value in the list.
+
+python
+Copy code
+my_list = [1, 2, 3, 2]
+count = my_list.count(2)  # Returns 2
+sort(): Sorts the list in ascending order (or based on a key function if provided).
+
+python
+Copy code
+my_list = [3, 1, 2]
+my_list.sort()  # Sorts the list to [1, 2, 3]
+reverse(): Reverses the elements of the list in place.
+
+python
+Copy code
+my_list = [1, 2, 3]
+my_list.reverse()  # Reverses the list to [3, 2, 1]
+clear(): Removes all elements from the list.
+
+python
+Copy code
+my_list = [1, 2, 3]
+my_list.clear()  # Clears the list
+
 #In a small town the population is p0 = 1000 at the beginning of a year. 
 #The population regularly increases by 2 percent per year and moreover 50 new inhabitants 
 #per year come to live in the town. 
