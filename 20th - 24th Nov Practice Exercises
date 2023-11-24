@@ -1,3 +1,25 @@
+#Given an integral number, determine if it's a square number:
+
+import math
+
+def is_square(n):
+    if n < 0:
+        return False
+    else:
+        sq_root = math.sqrt(n)
+        return sq_root % 1 == 0
+
+print(is_square(-1))
+
+
+#number % 1 == 0 #a way to check if a number is a perfect square using the modulos operator
+#is_integer() #another way to check if the square number is an integer
+#ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot
+# contain anything but exactly 4 digits or exactly 6 digits.
+#If the function is passed a valid PIN string, return true, else false
+
+
+
 #~Common listmethods
 
 List Methods:
