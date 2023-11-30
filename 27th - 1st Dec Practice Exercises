@@ -1,1 +1,10 @@
+import math
 
+def is_square(n):
+    if n < 0:
+        return False
+    else:
+        sq_root = math.sqrt(n)
+        return sq_root % 1 == 0
+
+print(is_square(-1))
